@@ -40,6 +40,8 @@ class NameController extends Controller
 
         $name->name = $request['name'];
         $name->origin = $request['origin'];
+
+        
         $name->description = $request['description'];
         $name->gender = $request['gender'];
         $name->meaning = $request['meaning'];

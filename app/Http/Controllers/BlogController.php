@@ -13,28 +13,16 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $blog = new Blog;
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+        $blog->title = $request['title'];
+        $blog->content = $request['content'];
+        $blog->author = $request['author'];
+        $blog->category_id = $request['category_id'];
+        $blog->photo = $request['photo'];
+        $blog->save();
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        return response()->json($blog, 201);
     }
 
     /**
