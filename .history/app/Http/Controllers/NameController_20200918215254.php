@@ -7,7 +7,6 @@ use App\Helpers\Utils;
 use App\Models\Name;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Log;
 
 class NameController extends Controller
 {
@@ -19,10 +18,7 @@ class NameController extends Controller
     public function index()
     {
         $name = Name::get(); // select * from names;
-        
-        // $json = json_encode($name);
-        // Log::info($json);
-        
+
         return response()->json($name, 200);
     }
 

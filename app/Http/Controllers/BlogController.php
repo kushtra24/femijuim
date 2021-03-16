@@ -2,53 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
-use App\Helpers\Utils;
-use App\Models\Name;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Log;
 
-class NameController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $name = Name::get(); // select * from names;
-        
-        // $json = json_encode($name);
-        // Log::info($json);
-        
-        return response()->json($name, 200);
+        //
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-
-        $name = new Name;
-
-        $name->name = $request['name'];
-        $name->origin = $request['origin'];
-        $name->description = $request['description'];
-        $name->gender = $request['gender'];
-        $name->meaning = $request['meaning'];
-
-        $name->save();
-
-//        $name = Name::create($request->all());
-
-        return response()->json($name, 201);
+        //
     }
 
     /**
@@ -62,6 +48,16 @@ class NameController extends Controller
         //
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
     /**
      * Update the specified resource in storage.

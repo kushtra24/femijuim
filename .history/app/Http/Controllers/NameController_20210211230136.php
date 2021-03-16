@@ -23,6 +23,7 @@ class NameController extends Controller
         // $json = json_encode($name);
         // Log::info($json);
         
+
         return response()->json($name, 200);
     }
 

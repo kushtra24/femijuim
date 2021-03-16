@@ -20,9 +20,9 @@ class NameController extends Controller
     {
         $name = Name::get(); // select * from names;
         
-        // $json = json_encode($name);
-        // Log::info($json);
+        Log::info(name);
         
+
         return response()->json($name, 200);
     }
 
